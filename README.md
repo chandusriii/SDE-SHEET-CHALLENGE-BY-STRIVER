@@ -8,5 +8,6 @@ Repository for my 45-day consistency challenge on Striver's SDE Sheet.
 | 02 | June 2, 2026 | 3 | [Day 02](./Day-02/README.md) |
 | 03 | June 3, 2026 | 3 | [Day 03](./Day-03/README.md) |
 | 04 | June 4, 2026 | 3 | [Day 04](./Day-04/README.md) |
+| 05 | June 5, 2026 | 3 | [Day 05](./Day-05/README.md) |
 
 Future days will be added one by one after daily completion.
