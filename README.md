@@ -1,1 +1,14 @@
-# 45 Days SDE Sheet Challenge By Striver\n\nRepository for my 45-day consistency challenge on Striver's SDE Sheet.\n\n| Day | Date | Problems Solved | Link |\n|-----|------|------------------|------|\n| 01 | June 1, 2026 | 3 | [Day 01](./Day-01/README.md) |\n| 02 | June 2, 2026 | 3 | [Day 02](./Day-02/README.md) |\n| 03 | June 3, 2026 | 3 | [Day 03](./Day-03/README.md) |\n| 04 | June 4, 2026 | 3 | [Day 04](./Day-04/README.md) |\n| 05 | June 5, 2026 | 3 | [Day 05](./Day-05/README.md) |\n| 06 | June 6, 2026 | 3 | [Day 06](./Day-06/README.md) |\n\nFuture days will be added one by one after daily completion.\n
+# 45 Days SDE Sheet Challenge By Striver
+
+Repository for my 45-day consistency challenge on Striver's SDE Sheet.
+
+| Day | Date | Problems Solved | Link |
+|-----|------|------------------|------|
+| 01 | June 1, 2026 | 3 | [Day 01](./Day-01) |
+| 02 | June 2, 2026 | 3 | [Day 02](./Day-02) |
+| 03 | June 3, 2026 | 3 | [Day 03](./Day-03) |
+| 04 | June 4, 2026 | 3 | [Day 04](./Day-04) |
+| 05 | June 5, 2026 | 3 | [Day 05](./Day-05) |
+| 06 | June 6, 2026 | 3 | [Day 06](./Day-06) |
+
+Future days will be added one by one after daily completion.
