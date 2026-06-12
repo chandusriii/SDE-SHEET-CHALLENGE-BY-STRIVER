@@ -15,5 +15,6 @@ Repository for my 45-day consistency challenge on Striver's SDE Sheet.
 | 09 | June 9, 2026 | 3 | [Day 09](./Day-09) |
 | 10 | June 10, 2026 | 3 | [Day 10](./Day-10) |
 | 11 | June 11, 2026 | 3 | [Day 11](./Day-11) |
+| 12 | June 12, 2026 | 3 | [Day 12](./Day-12) |
 
 Future days will be added one by one after daily completion.
