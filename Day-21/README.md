@@ -1,4 +1,4 @@
-#45DaysSDEChallenge - Day 21
+## 45DaysSDEChallenge - Day 21
 
 Date: June 21, 2026
 Problems Solved Today: 3
