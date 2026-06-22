@@ -1,31 +1,38 @@
-"""
-Kth Element of 2 Sorted Arrays
-Find the k-th element (1-indexed) in the union of two sorted arrays.
-"""
-from typing import List
+class Solution:
+    def kthElement(self, a, b, k):
+        if len(a) > len(b):
+            return self.kthElement(b, a, k)
+
+        m, n = len(a), len(b)
+
+        low = max(0, k - n)
+        high = min(k, m)
+
+        while low <= high:
+            cut1 = (low + high) // 2
+            cut2 = k - cut1
+
+            left1 = float('-inf') if cut1 == 0 else a[cut1 - 1]
+            left2 = float('-inf') if cut2 == 0 else b[cut2 - 1]
+
+            right1 = float('inf') if cut1 == m else a[cut1]
+            right2 = float('inf') if cut2 == n else b[cut2]
+
+            if left1 <= right2 and left2 <= right1:
+                return max(left1, left2)
+
+            elif left1 > right2:
+                high = cut1 - 1
+            else:
+                low = cut1 + 1
+
+        return -1
 
 
-def kth_element(nums1: List[int], nums2: List[int], k: int) -> int:
-    # Ensure nums1 is the smaller
-    if len(nums1) > len(nums2):
-        return kth_element(nums2, nums1, k)
-    m, n = len(nums1), len(nums2)
-    if m == 0:
-        return nums2[k-1]
-    if k == 1:
-        return min(nums1[0], nums2[0])
-    i = min(m, k // 2)
-    j = min(n, k - i)
-    if nums1[i-1] <= nums2[j-1]:
-        return kth_element(nums1[i:], nums2, k - i)
-    else:
-        return kth_element(nums1, nums2[j:], k - j)
+# Driver Code
+a = [2, 3, 6]
+b = [7, 9]
+k = 4
 
-
-if __name__ == "__main__":
-    a = [2, 3, 6, 7, 9]
-    b = [1, 4, 8, 10]
-    k = 5
-    print("A:", a)
-    print("B:", b)
-    print(f"{k}-th element:", kth_element(a, b, k))
+obj = Solution()
+print(obj.kthElement(a, b, k))
