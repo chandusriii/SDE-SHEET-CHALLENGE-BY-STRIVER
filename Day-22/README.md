@@ -1,19 +1,127 @@
-# Day 22
+# 45DaysSDEChallenge - Day 22
 
-This folder contains solutions for Day 22 problems from the SDE Sheet by Striver.
+Date: June 22, 2026
+Problems Solved Today: 5
+Sheet: Striver SDE Sheet
 
-Problems included:
+## 1) Search in Rotated Sorted Array
 
-- Search in Rotated Sorted Array
-- Median of 2 Sorted Arrays
-- Kth Element of 2 Sorted Arrays
-- Book Allocation Problem
-- Aggressive Cows
+### Problem Statement
 
-Run instructions
-- Each Python file contains a function implementing the solution and a small example under `if __name__ == "__main__":`.
-- To run a specific solution, execute e.g.:
+Given a rotated sorted array with distinct elements, find the index of the target element using Binary Search.
 
-  python "Day-22/Search in Rotated Sorted Array.py"
+### Approach
 
-- Files are intended to be readable and easy to adapt to custom input or unit tests.
+* Find the sorted half in every iteration.
+* Check whether the target lies in that half.
+* Reduce the search space accordingly.
+
+### Time Complexity
+
+O(log n)
+
+### Space Complexity
+
+O(1)
+
+---
+
+## 2) Median of 2 Sorted Arrays
+
+### Problem Statement
+
+Find the median of two sorted arrays without merging them.
+
+### Approach
+
+* Use Binary Search on the smaller array.
+* Create partitions such that left and right halves contain equal elements.
+* Calculate median based on total length.
+
+### Time Complexity
+
+O(log(min(m,n)))
+
+### Space Complexity
+
+O(1)
+
+---
+
+## 3) Kth Element of 2 Sorted Arrays
+
+### Problem Statement
+
+Find the kth element in the merged sorted array formed by two sorted arrays.
+
+### Approach
+
+* Apply Binary Search on partitions.
+* Ensure exactly k elements lie on the left side.
+* Return the maximum element from the left partition.
+
+### Time Complexity
+
+O(log(min(m,n)))
+
+### Space Complexity
+
+O(1)
+
+---
+
+## 4) Book Allocation Problem
+
+### Problem Statement
+
+Allocate books among students such that the maximum pages assigned to a student is minimized.
+
+### Approach
+
+* Use Binary Search on the answer.
+* Check if allocation is possible for a given maximum page limit.
+* Minimize the feasible answer.
+
+### Time Complexity
+
+O(n log(sum(nums)))
+
+### Space Complexity
+
+O(1)
+
+---
+
+## 5) Aggressive Cows
+
+### Problem Statement
+
+Place k cows in stalls such that the minimum distance between any two cows is maximized.
+
+### Approach
+
+* Sort stall positions.
+* Apply Binary Search on distance.
+* Greedily place cows to validate each distance.
+
+### Time Complexity
+
+O(n log(maxDistance))
+
+### Space Complexity
+
+O(1)
+
+---
+
+## Key Learnings
+
+* Binary Search on Rotated Arrays
+* Binary Search on Partitions
+* Binary Search on Answers
+* Greedy + Binary Search Optimization
+* Search Space Reduction Techniques
+
+### Day 22 Summary
+
+Solved 5 advanced Binary Search problems from Striver's SDE Sheet. Practiced Binary Search on Answers, partition-based Binary Search, and optimization techniques frequently asked in coding interviews.
