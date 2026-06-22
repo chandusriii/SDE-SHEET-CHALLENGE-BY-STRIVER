@@ -1,43 +1,38 @@
-"""
-Median of Two Sorted Arrays
-LeetCode 4
-"""
-from typing import List
+class Solution:
+    def median(self, arr1, arr2):
+        if len(arr1) > len(arr2):
+            arr1, arr2 = arr2, arr1
 
+        m, n = len(arr1), len(arr2)
+        low, high = 0, m
 
-def findMedianSortedArrays(nums1: List[int], nums2: List[int]) -> float:
-    A, B = nums1, nums2
-    if len(A) > len(B):
-        A, B = B, A
-    m, n = len(A), len(B)
-    imin, imax, half = 0, m, (m + n + 1) // 2
-    while imin <= imax:
-        i = (imin + imax) // 2
-        j = half - i
-        if i < m and B[j-1] > A[i]:
-            imin = i + 1
-        elif i > 0 and A[i-1] > B[j]:
-            imax = i - 1
-        else:
-            if i == 0:
-                left_max = B[j-1]
-            elif j == 0:
-                left_max = A[i-1]
+        while low <= high:
+            cut1 = (low + high) // 2
+            cut2 = (m + n + 1) // 2 - cut1
+
+            left1 = float('-inf') if cut1 == 0 else arr1[cut1 - 1]
+            right1 = float('inf') if cut1 == m else arr1[cut1]
+
+            left2 = float('-inf') if cut2 == 0 else arr2[cut2 - 1]
+            right2 = float('inf') if cut2 == n else arr2[cut2]
+
+            if left1 <= right2 and left2 <= right1:
+                if (m + n) % 2 == 0:
+                    return (max(left1, left2) + min(right1, right2)) / 2.0
+                else:
+                    return float(max(left1, left2))
+
+            elif left1 > right2:
+                high = cut1 - 1
             else:
-                left_max = max(A[i-1], B[j-1])
-            if (m + n) % 2 == 1:
-                return float(left_max)
-            if i == m:
-                right_min = B[j]
-            elif j == n:
-                right_min = A[i]
-            else:
-                right_min = min(A[i], B[j])
-            return (left_max + right_min) / 2.0
+                low = cut1 + 1
+
+        return 0.0
 
 
-if __name__ == "__main__":
-    a = [1, 3]
-    b = [2]
-    print("A:", a, "B:", b)
-    print("Median:", findMedianSortedArrays(a, b))
+# Driver Code
+arr1 = [2, 4, 5]
+arr2 = [1, 6]
+
+obj = Solution()
+print(obj.median(arr1, arr2))
