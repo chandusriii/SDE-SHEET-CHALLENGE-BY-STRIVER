@@ -1,6 +1,6 @@
-# 📚 Day 24 - Stack & Queue
+# 📚 Day 25 - Stack & Queue
 
-Welcome to **Day 24** of my **Striver's SDE Sheet Challenge**! 🚀
+Welcome to **Day 25** of my **Striver's SDE Sheet Challenge**! 🚀
 
 Today, I solved fundamental Stack-based problems that strengthen understanding of stacks, recursion, and monotonic stack techniques.
 
